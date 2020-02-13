@@ -1,4 +1,4 @@
 # Goonlock
-Cryptographic Acceleration Module for FPGA
+A Cryptographic Acceleration and Protocoled Wireless Communication Module for FPGA
 
-This is the basis version of our website, featuring the details of our masterpiece - Le Goon Lock - as well as the core itself in the linked github repo above.
+This is the prototype for our website, which will feature the details of our masterpiece - Le Goon Lock - as well as the core itself in the linked github repo above.
