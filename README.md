@@ -1,9 +1,9 @@
-# Goonlock
+# Le GoonLock
 A Cryptographic Acceleration and Protocoled Wireless Communication Module for FPGA
 
 [block diagram]
 
-Le Goonlock attempts to solve the problem of Internet of Things (IoT) devices revealing people's private data. IoT devices pose a serious security risk because they are underpowered to perform intensive, secure encryption. Le Goon Lock will offload this workload onto a Field Programmable Gate Array (FPGA), which will perform Advanced Encryption Standard, 256-bit  Galois Counter Mode (AES-256 GCM) encryption in parallel. The encrypted data is then passed to a MicroBlaze Processor, which will encapsulate this data in Transmission Control Protocol/Internet Protocol (TCP/IP) packets, then sent over Wi-Fi.
+Le GoonLock attempts to solve the problem of Internet of Things (IoT) devices revealing people's private data. IoT devices pose a serious security risk because they are underpowered to perform intensive, secure encryption. Le Goon Lock will offload this workload onto a Field Programmable Gate Array (FPGA), which will perform Advanced Encryption Standard, 256-bit  Galois Counter Mode (AES-256 GCM) encryption in parallel. The encrypted data is then passed to a MicroBlaze Processor, which will encapsulate this data in Transmission Control Protocol/Internet Protocol (TCP/IP) packets, then sent over Wi-Fi.
 
 ## Hardware
 The FGPA being used is a Digilent Nexys A7 development board. We chose this board because it contains the latest genration of Xilinx FPGA's, as well as a large amount of space for our implementation of AES-256 and TCP/IP packaging. We also use a Digilent PMOD Wi-Fi module to add Wi-Fi functionality to the Goonlock.
