@@ -14,14 +14,20 @@ The board being used is a Digilent Nexys A7 development board containing a Xilin
 ## Gateware
 Gateware is the configuration of the FPGA, which in this project is done in Verilog. We have written Verilog code to implement an AES-256 encryption module. This module has a configurable number of AES blocks to be able to prioritize speed or area when performing GCM in parallel. 
 
+### AES
+Also known as Rijndael, David TODO: description of AES steps
+
 
 ![image of AES steps](https://upload.wikimedia.org/wikipedia/commons/9/98/Aes_round_function-new.svg)
 
-David TODO: description of AES steps
+
+### GCM
+David TODO: description of GCM steps
 
 ![image of GCM steps](https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/GCM-Galois_Counter_Mode_with_IV.svg/500px-GCM-Galois_Counter_Mode_with_IV.svg.png)
 
-David TODO: decription of GCM steps
+
+### Microprocessor
 
 This encryption module is connected to a MicroBlaze microprocessor over the Advanced eXtensible Interface Lite (AXI-Lite) bus that will perform all the other tasks needed to parse inputted data and send the encrypted data to another FPGA board.
 
