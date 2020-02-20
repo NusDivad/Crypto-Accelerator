@@ -4,10 +4,10 @@ A Cryptographic Acceleration and Protocoled Wireless Communication FPGA Module f
 
 [block diagram]
 
-Le GoonLock attempts to solve the problem of Internet of Things (IoT) devices revealing people's private data. IoT devices pose a serious security risk because they are underpowered to perform intensive, secure encryption. Le GoonLock will offload this workload onto a Field Programmable Gate Array (FPGA). The module will perform Advanced Encryption Standard, 256-bit (AES-256) encryption in parallel, with Galois Counter Mode (GCM) in parallel. The encrypted data is then passed to a MicroBlaze Processor, which will encapsulate this data in Transmission Control Protocol/Internet Protocol (TCP/IP) packets, then sent over Wi-Fi.
+Le GoonLock attempts to solve the problem of Internet of Things ([IoT](https://en.wikipedia.org/wiki/Internet_of_things)) devices revealing people's private data. IoT devices pose a serious security risk because they are underpowered to perform intensive, secure encryption. Le GoonLock will offload this workload onto a Field Programmable Gate Array ([FPGA](http://en.wikipedia.nom.ke/wiki/Field-programmable_gate_array)). The module will perform Advanced Encryption Standard, 256-bit ([AES-256](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)) encryption in parallel, with Galois Counter Mode ([GCM](https://en.wikipedia.org/wiki/Galois/Counter_Mode)) in parallel. The encrypted data is then passed to a MicroBlaze Processor, which will encapsulate this data in Transmission Control Protocol/Internet Protocol ([TCP/IP](http://en.wikipedia.nym.mn/wiki/Internet_protocol_suite)) packets, then sent over Wi-Fi.
 
 ## Hardware
-The board being used is a Digilent Nexys A7 development board containing a Xilinx XC7A100T FPGA. We chose this board because it contains the latest genration of Xilinx FPGAs, as well as a large amount of space (63,000 look-up tables) for our implementation of AES-256 and TCP/IP packaging. We also use a Digilent PMOD Wi-Fi module to add Wi-Fi functionality to the Goonlock.
+The board being used is a Digilent Nexys A7 development board containing a Xilinx XC7A100T FPGA. We chose this board because it contains the latest genration of Xilinx FPGAs, as well as a large amount of space (63,000 look-up tables) for our implementation of AES-256 and TCP/IP packaging. We also use a Digilent PMOD Wi-Fi module to add Wi-Fi functionality to the GoonLock.
 
 ![FGPA board and Wi-Fi card](https://cdn10.bigcommerce.com/s-7gavg/products/629/images/5235/NexysA7-obl-600__85101.1541089437.1280.1280.jpg?c=2)
 
