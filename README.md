@@ -2,7 +2,7 @@
 
 A Cryptographic Acceleration and Protocoled Wireless Communication FPGA Module for IoT
 
-## Project files to be uploaded soon
+Project files to be uploaded soon
 
 [block diagram]
 
