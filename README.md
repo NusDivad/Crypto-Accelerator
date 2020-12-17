@@ -2,9 +2,7 @@
 
 A Cryptographic Acceleration and Protocoled Wireless Communication FPGA Module for IoT
 
-Project files to be uploaded soon
-
-[block diagram]
+Project file uploads in progress.
 
 Le GoonLock attempts to solve the problem of Internet of Things ([IoT](https://en.wikipedia.org/wiki/Internet_of_things)) devices revealing people's private data. IoT devices pose a serious security risk because they are underpowered to perform intensive, secure encryption. Le GoonLock will offload this workload onto a Field Programmable Gate Array ([FPGA](http://en.wikipedia.nom.ke/wiki/Field-programmable_gate_array)). The module will perform Advanced Encryption Standard, 256-bit ([AES-256](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)) encryption in parallel, with Galois Counter Mode ([GCM](https://en.wikipedia.org/wiki/Galois/Counter_Mode)) in parallel. The encrypted data is then passed to a MicroBlaze Processor, which will encapsulate this data in Transmission Control Protocol/Internet Protocol ([TCP/IP](http://en.wikipedia.nym.mn/wiki/Internet_protocol_suite)) packets, then sent over Wi-Fi.
 
@@ -17,14 +15,12 @@ The board being used is a Digilent Nexys A7 development board containing a Xilin
 Gateware is the configuration of the FPGA, which in this project is done in Verilog. We have written Verilog code to implement an AES-256 encryption module. This module has a configurable number of AES blocks to be able to prioritize speed or area when performing GCM in parallel. 
 
 ### AES
-Also known as Rijndael, David TODO: description of AES steps
 
 
 ![image of AES steps](https://upload.wikimedia.org/wikipedia/commons/9/98/Aes_round_function-new.svg)
 
 
 ### GCM
-David TODO: description of GCM steps
 
 ![image of GCM steps](https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/GCM-Galois_Counter_Mode_with_IV.svg/500px-GCM-Galois_Counter_Mode_with_IV.svg.png)
 
@@ -41,10 +37,9 @@ This is the C++ code that implements a state machine to reiceive inputted data, 
 
 In more detail. after the processor connects to a Wi-Fi network, it moves into a WAIT state, where it checks for incoming TCP connections, or a signal from the slave device that it is ready to send a message. If a message is ready to be received, the input is read 16 characters at a time, the same size as a AES block. The raw data is then written to the 4 32-bit input registers of the encryption module. Once the valid signal on the encryption module is raised, the encrypted data is read and converted into a hexadecimal string, which is then sent over TCP to the receiving device. The receiving device transisions out of it's WAIT state and passes this encrypted data to a decryption module. Once the decrypted data is valid, it is passed to the recieving FPGA's slave device, completing the transaction.
 
-[image of state machine]
 
 ## Results
-timing for exchanges, algorithm throughput, and luts/slices used.
+While each part of the project is complete, we haven't finished integration, and don't have final numbers for processing speed and LUTs used.
 
 ## Authors
 Jon Recta (jonpaolo02)
